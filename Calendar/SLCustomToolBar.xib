@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <toolbar contentMode="scaleToFill" barStyle="black" id="cqp-Yf-q2a" customClass="SLCustomToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <color key="backgroundColor" red="0.099217705429999997" green="0.15016034249999999" blue="0.18527577819999999" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+            <items>
+                <barButtonItem title="Item" id="pLy-KT-Cw6" userLabel="Cancel Btn">
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="M5E-4r-Izo"/>
+                <barButtonItem tag="1" title="Add Remaining" style="plain" id="qqo-u5-8MG">
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="qva-RG-QMu"/>
+                <barButtonItem tag="2" title="Item" id="bzd-5b-g7G" userLabel="Done Btn">
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </barButtonItem>
+            </items>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="leftButton" destination="pLy-KT-Cw6" id="5Wp-rR-mlA"/>
+                <outlet property="middleButton" destination="qqo-u5-8MG" id="lce-hD-nbx"/>
+                <outlet property="rightButton" destination="bzd-5b-g7G" id="XpA-M5-IY7"/>
+            </connections>
+        </toolbar>
+    </objects>
+</document>
