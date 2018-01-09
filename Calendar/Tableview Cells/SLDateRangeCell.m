@@ -55,6 +55,8 @@
 
 - (NSString *)getTitleFromDate:(NSDate *)date{
     NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.locale = [NSLocale currentLocale];
+    formatter.calendar = [NSCalendar currentCalendar];
     [formatter setDateFormat:@"d/MM/yyyy"];
     return [formatter stringFromDate:date];
 }
@@ -95,19 +97,13 @@
     if (textField == _firstTextField) {
         self.indexOfCellSelected = TextFieldSelectedLeft;
         self.datePicker.date = self.startDate;
-        if (![self.startDate isEqualToDateIgnoringTime:self.endDate]) {
-            self.datePicker.maximumDate = [self.endDate dateByAddingDays:1];
-        }else{
-            self.datePicker.maximumDate = self.endDate;
-        }
+        self.datePicker.minimumDate = nil;
+        self.datePicker.maximumDate = self.endDate;
     }else{
         self.indexOfCellSelected = TextFieldSelectedRight;
         self.datePicker.date = self.endDate;
-        if (![self.startDate isEqualToDateIgnoringTime:self.endDate]) {
-            self.datePicker.minimumDate = [self.startDate dateBySubtractingDays:1];
-        }else{
-            self.datePicker.minimumDate = self.startDate;
-        }
+        self.datePicker.minimumDate = self.startDate;
+        self.datePicker.maximumDate = nil;
     }
     textField.inputView = self.datePicker;
     textField.inputAccessoryView = self.customToolbar;
